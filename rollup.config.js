@@ -1,11 +1,11 @@
 import typescript from "@rollup/plugin-typescript";
 import node from "@rollup/plugin-node-resolve";
 import terser from "@rollup/plugin-terser";
+import css from "rollup-plugin-css-only";
 
 const route = (input, output)=>({
 	input,
 	output: {
-		sourcemap: true,
 		format: "es",
 		file: output
 	},
@@ -13,6 +13,9 @@ const route = (input, output)=>({
 		node(),
 		typescript(),
 		terser(),
+		css({
+			output: "main.css"
+		})
 	]
 })
 

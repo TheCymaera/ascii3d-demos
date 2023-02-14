@@ -1,6 +1,18 @@
 import * as scene from "./scene.js";
-import { Matrix4, Vector3 } from "open-utilities/core/maths/mod.js";
+import { Vector3 } from "open-utilities/core/maths/mod.js";
 import { Duration } from "open-utilities/core/datetime/mod.js";
+import {} from "helion/core.js";
+import {} from "helion/LightTheme.js";
+import {} from "helion/AppBar.js";
+import {} from "helion/Panel.js";
+import {} from "helion/Stack.js";
+import {} from "helion/Intangible.js";
+import {} from "helion/CircleButton.js";
+import {} from "helion/StandardView.js";
+import {} from "helion/SidebarView.js";
+import {} from "helion/Checkbox.js";
+import {} from "helion/Slider.js";
+import {} from "helion/AspectRatio.js";
 
 export const camera = {
 	angleX: document.querySelector("#cameraAngleXInput") as HTMLInputElement,

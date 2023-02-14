@@ -2,17 +2,17 @@
 
 <label>
 	<span>Angle X</span>
-	<input type="range" id="cameraAngleXInput" min="0" max="360" step=".25" value="0" />
+	<input type="range" class="helion-slider" id="cameraAngleXInput" min="0" max="360" step=".25" value="0" />
 </label>
 
 <label>
 	<span>Angle Y</span>
-	<input type="range" id="cameraAngleYInput" min="-90" max="90" step=".25" value="30"  />
+	<input type="range" class="helion-slider" id="cameraAngleYInput" min="-90" max="90" step=".25" value="30"  />
 </label>
 
 <label>
 	<span>Distance</span>
-	<input type="range" id="cameraDistanceInput" min="3" max="100" step=".25" value="15" />
+	<input type="range" class="helion-slider" id="cameraDistanceInput" min="3" max="100" step=".25" value="15" />
 </label>
 
 <div><small>Keyboard controls: WASD, QE</small></div>
@@ -20,7 +20,7 @@
 <h2>Cube</h2>
 
 <label class="icon-field-container">
-	<input type="checkbox" class="checkbox" id="rotateCubeInput" checked /> <span></span>
+	<input type="checkbox" class="helion-checkbox" id="rotateCubeInput" checked /> <span></span>
 	<span>Rotate</span>
 </label>
 
@@ -29,8 +29,16 @@
 <h2>Water</h2>
 
 <label class="icon-field-container">
-	<input type="checkbox" class="checkbox" id="renderWaterInput" checked /> <span></span>
+	<input type="checkbox" class="helion-checkbox" id="renderWaterInput" checked /> <span></span>
 	<span>Render</span>
 </label>
 
 <div style="height: 30%;"></div>
+
+<style>
+.icon-field-container {
+	display: flex;
+	align-items: center;
+	gap: .5em;
+}
+</style>

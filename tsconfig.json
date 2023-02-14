@@ -15,7 +15,7 @@
 		"alwaysStrict": true,
 
 		"preserveConstEnums": true,
-		"sourceMap": true,
+		"importsNotUsedAsValues": "preserve",
 
 		"skipDefaultLibCheck": true,
 
