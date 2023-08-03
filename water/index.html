@@ -1,46 +1,21 @@
-<?php
-	$url = strtok("$_SERVER[REQUEST_SCHEME]://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", "\?|#");
-
-	// page basic settings
-	$page_title 		= "Ascii3D Water Demo";
-	$page_description 	= "Ascii3D Water Demo";
-	$page_author		= "Morgan";
-	$page_keywords		= "Heledron, Hadron, Cymaera, OpenGL, WebGL, Ascii3D";
-
-	// page open graph settings
-	$page_og_title = $page_title;
-	$page_og_description = $page_description;
-	$page_og_url = $url;
-	$page_og_image = dirname($page_og_url, 2) . "/" . "thumbnail.png";
-	$page_og_type = "website";
-?>
 <!DOCTYPE html>
-<html class="full-window-document">
+<html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	
-	<!-- title & favicon -->
-	<title><?php echo $page_title;?></title>
-	<link rel="icon" href="/favicon.png" type="image/png"/>
-	<link rel="canonical" href="<?php echo $page_og_url;?>"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!-- info -->
-	<meta name="author" content="<?php echo $page_author;?>"/>
-	<meta name="description" content="<?php echo $page_description;?>"/>
-	<meta name="keywords" content="<?php echo $page_keywords;?>"/>
-	
-	<!-- sharing -->
-	<meta property="og:title" content="<?php echo $page_og_title;?>"/>
-	<meta property="og:description" content="<?php echo $page_og_description;?>"/>
-	<meta property="og:url"   content="<?php echo $page_og_url;?>"/>
-	<meta property="og:image" content="<?php echo $page_og_image;?>"/>
-	<meta property="og:type"  content="<?php echo $page_og_type;?>"/>
+	<title>Ascii3D Water Demo</title>
+	<meta name="author" content="Morgan"/>
+	<meta name="description" content="Ascii3D Water Demo"/>
+	<meta name="keywords" content="Heledron, Hadron, Cymaera, OpenGL, WebGL, Ascii3D"/>
+	<link rel="canonical" href="https://heledron.com/misc/ascii3d/water/"/>
+	<meta property="og:image" content="https://heledron.com/misc/ascii3d/water/thumbnail.webp"/>
+	<link rel="icon" href="/favicon.png" type="image/png"/>
 
 	<!-- styles -->
 	<style> svg { fill: currentColor; height: 1em; width: 1.5em; } </style>
-	<link rel="stylesheet" type="text/css" href="./dst/main.css"/>
-	<script type="module" src="./dst/main.js"></script>
+	<script type="module" src="./main.ts"></script>
 </head>
 <body>
 	<helion-standard-view class="helion-fill-parent">
@@ -53,9 +28,7 @@
 			<helion-app-bar-title>Ascii 3D Water Demo</helion-app-bar-title>
 		</helion-app-bar>
 		<helion-sidebar-view id=sidebarView slot="body" sidebar-opened>
-			<helion-panel slot=sidebar style="overflow: auto;">
-				<?php include "./sidebar.html"; ?>
-			</helion-panel>
+			<helion-panel id="SIDEBAR_CONTAINER" slot=sidebar style="overflow: auto;"></helion-panel>
 			<helion-stack slot=main>
 				<helion-aspect-ratio style="--aspect-ratio: 1; padding: 1em 4em;">
 					<canvas class="helion-panel" id=myCanvas></canvas>	
@@ -79,9 +52,7 @@
 	</helion-standard-view>
 
 	<helion-panel class="infoDialog helion-fill-parent">
-		<div style="max-width: 600px; width: 100%; margin: auto;">
-			<?php include "./info.html"; ?>
-		</div>
+		<div id="INFO_CONTAINER" style="max-width: 600px; width: 100%; margin: auto;"></div>
 
 		<div class="helion-intangible helion-fill-parent actionButtons">
 			<button class="helion-circle-button js-toggleDialog" title="Close"> 

@@ -1,4 +1,4 @@
-import { VertexShader, ClipspacePosition, VertexData, PixelShader, PixelData } from "ascii3d";
+import { type VertexShader, VertexData, type PixelShader, PixelData } from "ascii3d";
 import { Matrix4, Vector4 } from "open-utilities/core/maths/mod.js";
 
 export interface Uniforms {

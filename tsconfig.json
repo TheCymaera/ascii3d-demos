@@ -1,9 +1,6 @@
 {
 	"compilerOptions": {
-		"rootDir": "src",
-		"outDir": "dst",
-		
-		"module": "ESNext",
+		"module": "NodeNext",
 		"target": "ESNext",
 
 		"moduleResolution": "nodenext",
@@ -15,9 +12,10 @@
 		"alwaysStrict": true,
 
 		"preserveConstEnums": true,
-		"importsNotUsedAsValues": "preserve",
+		"verbatimModuleSyntax": true,
 
 		"skipDefaultLibCheck": true,
+		"skipLibCheck": true,
 
 		"lib": ["ES2020", "DOM", "DOM.Iterable"],
 

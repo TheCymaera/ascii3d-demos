@@ -1,5 +1,5 @@
 import { RenderBuffer } from "ascii3d";
-import * as rgbShader from "../shaders/rgba-2d.js";
+import * as rgbShader from "../shared/shaders/rgba-2d.js";
 
 // config
 const width = 50, height = 50, fontSize = 32, letterSpacing = fontSize * 0.8;

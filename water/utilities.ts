@@ -34,3 +34,8 @@ export function mixColors(base: Color, add: Color): Color {
 
 	return [R,G,B,A];
 }
+
+export interface WaterOptions {
+	render: boolean;
+	frame: number;
+}

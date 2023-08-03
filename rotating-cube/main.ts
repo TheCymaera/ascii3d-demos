@@ -1,6 +1,6 @@
 import { RenderBuffer } from "ascii3d";
-import * as cube from "../models/cube.js";
-import * as rgbaShader from "../shaders/rgba.js";
+import * as cube from "../shared/models/cube.js";
+import * as rgbaShader from "../shared/shaders/rgba.js";
 import { Matrix4, Vector3 } from "open-utilities/core/maths/mod.js";
 import { AnimationFrameScheduler } from "open-utilities/web/ui/mod.js";
 

@@ -1,9 +1,9 @@
 import { RenderBuffer } from "ascii3d";
-import { Camera } from "../utilities.js";
-import * as rgbaShader from "../shaders/rgba.js";
-import * as waterShader from "../shaders/water.js";
-import * as cubeModel from "../models/cube.js";
-import * as waterModel from "../models/water.js";
+import { Camera, type WaterOptions } from "./utilities.js";
+import * as rgbaShader from "../shared/shaders/rgba.js";
+import * as waterShader from "../shared/shaders/water.js";
+import * as cubeModel from "../shared/models/cube.js";
+import * as waterModel from "../shared/models/water.js";
 import { Matrix4, Vector3 } from "open-utilities/core/maths/mod.js";
 
 export const canvas = document.querySelector("canvas")!;
@@ -13,7 +13,7 @@ export const renderBuffer = new RenderBuffer;
 export const reflectionTexture = new RenderBuffer;
 
 export const playerCamera = new Camera(Math.PI/4);
-export const reflectionCamera = new Camera(Math.PI/1.5);
+export const reflectionCamera = new Camera(Math.PI/2);
 reflectionCamera.lookAt(
 	new Vector3(0,-5,0),	// camera position (at water surface)
 	new Vector3(0,0,0),		// cube position
@@ -21,7 +21,7 @@ reflectionCamera.lookAt(
 )
 export const cubeModelMatrix = Matrix4.identity();
 
-export const water = {
+export const water: WaterOptions = {
 	frame: 0,
 	render: true,
 }

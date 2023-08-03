@@ -1,4 +1,4 @@
-import { PixelShader, PixelData, VertexShader, VertexData, ClipspacePosition } from "ascii3d";
+import { type PixelShader, PixelData, type VertexShader, VertexData, type ClipspacePosition } from "ascii3d";
 
 export type RGBAVertex = [number, number, number, number, number, number];
 export type RGBAFragment = [number, number, number, number];
