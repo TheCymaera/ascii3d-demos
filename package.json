@@ -8,7 +8,7 @@
 	"dependencies": {
 		"ascii3d": "^2.0.0",
 		"helion": "^1.0.8",
-		"open-utilities": "^1.0.3",
-		"vite": "^4.4.8"
+		"open-utilities": "^1.0.5",
+		"vite": "^4.5.0"
 	}
 }

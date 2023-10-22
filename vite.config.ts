@@ -9,10 +9,10 @@ export default defineConfig({
 
 		rollupOptions: {
 			input: {
-				"index": "index.html",
-				"water": "water/index.html",
-				"rotating-cube": "rotating-cube/index.html",
-				"rainbow-triangle": "rainbow-triangle/index.html",
+				"index": "./index.html",
+				"water": "./water/index.html",
+				"rotating-cube": "./rotating-cube/index.html",
+				"rainbow-triangle": "./rainbow-triangle/index.html",
 			}
 		}
 	},
